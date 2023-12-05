@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alto vale</title>
+    <link rel="stylesheet" href="cidades.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+           
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid black;
+        }
+
+        
+
+        .image-area {
+            border: 2px solid black;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #000;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        .btn:hover {
+            background-color: #444;
+        }
+
+        .btn-next {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .btn-prev {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+        }
+        .btn-prin {
+            position: fixed;
+            bottom: 20px;
+            left: 100px;
+        }
+        @media screen and (max-width: 768px) {
+        body {
+            padding: 20px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div style="flex: 1; margin: 20px;">
+        <h1>ALTO VALE</h1>
+        <table>
+            <tr>
+                <th>População</th>
+                <td> 297.821</td>
+            </tr>
+            <tr>
+                <th>IDHM</th>
+                <td>0,802</td>
+            </tr>
+          
+            <!-- Adicione as outras informações conforme necessário -->
+        </table>
+    </div>
+    <div style="flex: 1; margin: 20px;">
+        <div class="image-area">
+            <img src="https://www.oqueninguemteconta.com.br/wp-content/uploads/2021/07/mirante-cachoeira-do-rio-do-salto-chapadao-do-lageado-sc-6.jpg" alt="Imagem da direita">
+        </div>
+    </div>
+    <a href="atalanta.html" class="btn btn-next">Próxima</a>
+    <a href="indexMap.html" class="btn btn-prin">Pagina principal</a>
+    <a href="agrolandia.html" class="btn btn-prev">Voltar</a>
+
+
+    
+    <div style="flex: 1; margin: 20px;">
+        <h1>HISTORIA</h1>
+        <textarea rows="40" cols="70" style="background-color:#B0C4DE; font-size: large; font-family: 'Times New Roman', Times, serif;">
+            O Alto Vale do Itajaí, localizado no estado de Santa Catarina, Brasil, é uma região que encanta por sua rica diversidade geográfica, cultural e econômica. Banhada por rios sinuosos e abraçada por montanhas exuberantes, esta área é um convite para explorar as maravilhas naturais.
+
+            A economia do Alto Vale é impulsionada por setores variados, com destaque para a agricultura, a indústria e o comércio. Cidades pitorescas pontuam o cenário, cada uma carregando consigo suas próprias histórias e tradições. O Vale é conhecido não apenas por sua produção agrícola, que inclui cultivos de maçã, tabaco e cebola, mas também por sua participação na indústria têxtil, metalúrgica e de alimentos.
+            
+            Além da vibrante atividade econômica, o Alto Vale do Itajaí preserva um rico patrimônio cultural. Festivais folclóricos, eventos tradicionais e uma calorosa hospitalidade da comunidade local contribuem para a atmosfera única da região. As cidades oferecem não apenas beleza visual, mas também uma experiência sensorial que abraça os sabores da gastronomia local, muitas vezes destacando pratos típicos e ingredientes frescos cultivados nas terras férteis da região.
+            
+            Para os amantes da natureza, o Alto Vale é um paraíso. Trilhas que cortam florestas exuberantes, cachoeiras que ecoam a tranquilidade da região e uma geografia que se presta a aventuras ao ar livre fazem desta área um destino procurado por quem busca conexão com a natureza.
+            
+            Em resumo, o Alto Vale do Itajaí não é apenas um ponto no mapa, mas uma experiência multifacetada que combina tradição, progresso econômico e uma exuberante beleza natural. Convidamos você a explorar mais profundamente esta região, mergulhar em suas histórias, sabores e paisagens, e descobrir a autenticidade que a torna um tesouro escondido no coração de Santa Catarina.
+            
+            
+        </textarea>
+    </div>
+</body>
+</html>

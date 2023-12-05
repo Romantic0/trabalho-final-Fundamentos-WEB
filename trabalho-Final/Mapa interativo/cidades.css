@@ -1,0 +1,8 @@
+.image-area {
+    border: 2px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+body{ 
+    background-color: #B0C4DE;
+}

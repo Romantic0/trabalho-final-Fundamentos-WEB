@@ -1,0 +1,251 @@
+
+    <!DOCTYPE html>
+    <html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagina Principal</title>
+        
+    </head>
+    <body>
+      
+        <header>
+            <h1><div class="logo">
+                <div class="letter">N</div>
+                <div class="letter">O</div>
+                <div class="letter">V</div>
+                <div class="letter">O</div>
+                <div class="letter">&nbsp;</div>
+                <div class="letter">R</div>
+                <div class="letter">U</div>
+                <div class="letter">M</div>
+                <div class="letter">O</div>
+            </div></h1>
+           
+                
+    
+            </p>
+            <body> <!-- Adicionei a div do brasão no canto superior direito do site --> <div class="brasao">
+                 
+            </div>
+        </header>
+        <main>
+            <section class="sidebar">
+                <ul>
+                    <li><a href="altovale.html"><strong>INFORMAÇÕES GERAIS DO ALTO VALE</STRONG></a></li>
+                    
+                </ul>
+            </section>
+           <div class="map-and-table"></div> 
+            <section class="map-area">
+                
+              <!--link para acessar o tutorial(https://leafletjs.com/examples/quick-start/)-->
+    <!--link para adocumentação de eventos(https://leafletjs.com/reference.html)-->
+    <!--link para AUlA E EXEMPLOS, AQUI FALA COMO FAZER A MINHA IDEIA(https://leafletjs.com/examples.html)-->
+    <!--CSS necessario do leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="estilos.css"/>
+<!--Referencia para geoJSON do municipios (https://github.com/tbrugz/geodata-br/blob/master/geojson/geojs-42-mun.json?short_path=5bac3b0) -->
+</head>
+<body>
+<div id="map"></div>  
+
+
+</body>
+<script src="logicas.js"></script>
+<style>
+    .body{min-height: 50vh;}
+  
+    .map-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    .map-area table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .map-area th, .map-area td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+        background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p3/2431825-orientacao-da-estrada-que-leva-ao-oceano-na-vertical-vetor.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .map-area table {
+        border-collapse: collapse;
+        width: 60%;
+        height: 2%;
+        
+    }
+    .map-and-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: scroll;
+}
+@media screen and (max-width: 768px) {
+    td {
+        text-align: center;
+        padding: 10px;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+  
+ }
+ th{
+    text-align: center;
+ }
+
+
+
+.table-container {
+ width:55%; /* Ajuste para a largura desejada */
+ height: 1000px; /* Ajuste para a altura desejada */
+ overflow-y: auto; /* Habilita a barra de rolagem vertical */
+}
+
+.table-container table {
+ width: 100%; /* Garante que a tabela preencha a largura do contêiner */
+ border-collapse: collapse; /* Remova espaços entre células */
+ 
+}
+</style>
+<div class="table-container">
+<table> 
+    <tr> 
+        <th>CIDADE</th> 
+        
+    </tr> 
+    <tr> 
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Bandeira_do_munic%C3%ADpio_de_Agrol%C3%A2ndia_%28SC%29.png" height="40px"><STRONG>AGROLANDIA</strong> </a></td> 
+        
+    </tr> 
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Bandeira_do_munic%C3%ADpio_de_Agron%C3%B4mica_%28SC%29.svg/1200px-Bandeira_do_munic%C3%ADpio_de_Agron%C3%B4mica_%28SC%29.svg.png" height="40px" ><STRONG>AGRONOMICA</strong> </a></td>
+    
+    <tr>
+        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOUENow7kooLAXoXgn-_MGUbPBFLO_2vzCvDxDntzNb9oGXPE5XmPWsnwPSE0lVJDnms0&usqp=CAU" height="40px"><strong>ATALANTA</strong></a></td>
+        </tr>
+        <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Bandeira_do_munic%C3%ADpio_de_Aurora_%28SC%29.svg" height="40px" > <STRONG>  AURORA</strong> </a></td>
+       
+    </tr>
+</tr> 
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Bandeira_do_munic%C3%ADpio_de_Bra%C3%A7o_do_Trombudo_%28SC%29.svg/1200px-Bandeira_do_munic%C3%ADpio_de_Bra%C3%A7o_do_Trombudo_%28SC%29.svg.png" height="40px"><STRONG>BRAÇO DO TROMBUDO</strong> </a></td>
+
+<tr>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Bandeira_do_munic%C3%ADpio_de_Chapad%C3%A3o_do_Lageado_%28SC%29.svg" height="40px"><STRONG>CHAPADÃO DO LAGEADO</strong> </a></td>
+   
+</tr>
+</tr> 
+
+<td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Bandeira_do_munic%C3%ADpio_de_Dona_Emma_%28SC%29.svg" height="40px"><STRONG>DONA EMMA</strong> </a></td>
+
+<tr>
+    <td><IMG SRC="https://www.ibirama.sc.gov.br/img/conteudo/images/Design%20sem%20nome.png" height="40PX"><STRONG>IBIRAMA</strong> </a></td>
+</tr>    
+<tr>
+    <td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/8/81/Bandeira_do_munic%C3%ADpio_de_Imbuia_%28SC%29.svg" height="40PX"><STRONG>IMBUIA</strong> </a></td>
+    </tr>
+
+<td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/2/28/Bandeira_do_munic%C3%ADpio_de_Ituporanga_%28SC%29.svg" height="40PX"><STRONG>ITUPORANGA</strong> </a></td>
+
+<tr>
+    <td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Bandeira_do_munic%C3%ADpio_de_Jos%C3%A9_Boiteux_%28SC%29.png/2560px-Bandeira_do_munic%C3%ADpio_de_Jos%C3%A9_Boiteux_%28SC%29.png" height="40PX"><STRONG>JOSE BOITEUX</strong> </a></td>
+    
+</tr>
+</tr> 
+<td><IMG SRC="https://laurentino.sc.gov.br/uploads/sites/163/2021/12/230217.jpg" height="40PX"><STRONG>LAURENTINO</strong> </a></td>
+
+<tr>
+    <td><IMG SRC="https://esportealtovale.com.br/imagem/1503946488_alto-vale-esportes.jpg" height="40PX"><STRONG>LONTRAS</strong> </a></td>
+    
+</tr>
+</tr> 
+<td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bandeira_do_munic%C3%ADpio_de_Mirim_Doce_%28SC%29.svg/1200px-Bandeira_do_munic%C3%ADpio_de_Mirim_Doce_%28SC%29.svg.png" height="40PX"><STRONG>MIRIM DOCE</strong> </a></td>
+
+<tr>
+    <td><IMG SRC="data:image/png;base64,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" height="40PX"><STRONG>PETROLANDIA</strong> </a></td>
+   
+</tr>
+</tr>
+</tr> 
+<td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_do_munic%C3%ADpio_de_Pouso_Redondo_%28SC%29.svg/1000px-Bandeira_do_munic%C3%ADpio_de_Pouso_Redondo_%28SC%29.svg.png" height="40PX"><STRONG>POUSO REDONDO</strong> </a></td>
+
+<tr>
+    <td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/f/f8/Bandeira_do_munic%C3%ADpio_de_Presidente_Get%C3%BAlio_%28SC%29.svg" height="40 PX"><STRONG>PRESIDENTE GETULIO</strong> </a></td>
+  
+</tr>
+</tr> 
+<td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/2/2a/Bandeira_do_munic%C3%ADpio_de_Presidente_Nereu_%28SC%29.svg" height="40PX"><STRONG>PRESIDENTE NEREU</strong> </a></td>
+
+<tr>
+    <td><IMG SRC="https://www.mbi.com.br/mbi/files/media/image/simbolopedia/municipio-rio-do-campo-bandeira-simb-brsssc0401114508.jpg" height="40PX"><STRONG>RIO DO CAMPO</strong> </a></td>
+    
+</tr>
+</tr>
+ 
+<td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bandeira_do_munic%C3%ADpio_de_Rio_do_Oeste_%28SC%29.svg" height="40PX"><strong>RIO DO OESTE</strong> </a></td>
+
+<tr>
+    <td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Bandeira_do_munic%C3%ADpio_de_Rio_do_Sul_%28SC%29.svg/1200px-Bandeira_do_munic%C3%ADpio_de_Rio_do_Sul_%28SC%29.svg.png" height="40PX"><STRONG>RIO DO SUL</strong> </a></td>
+   
+</tr>
+</tr> 
+<td><IMG SRC="https://salete.sc.gov.br/uploads/2021/12/1808063-800x445.jpg" height="40PX"><STRONG>SALETE</strong> </a></td>
+
+<tr>
+    <td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/f/f9/Sc-santa-terezinha-bandeira.jpg" height="40PX"><STRONG>SANTA TEREZINHA</strong> </a></td>
+    
+</tr>
+</tr> 
+<td><IMG SRC="https://www.taio.sc.gov.br/uploads/sites/346/2021/12/1978364_Bandeira_do_Municipio_de_Taio.jpg" height="40PX"><STRONG>TAIO</strong> </a></td>
+
+<tr>
+    <td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bandeira_do_munic%C3%ADpio_de_Trombudo_Central_%28SC%29.svg/2560px-Bandeira_do_munic%C3%ADpio_de_Trombudo_Central_%28SC%29.svg.png" height="40PX"><STRONG>TROMBUDO CENTRAL</strong> </a></td>
+    
+</tr>
+</tr> 
+<td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Bandeira_do_munic%C3%ADpio_de_Vidal_Ramos_%28SC%29.svg/1200px-Bandeira_do_munic%C3%ADpio_de_Vidal_Ramos_%28SC%29.svg.png" height="40PX"><STRONG>VIDAL RAMOS</strong> </a></td>
+
+<tr>
+    <td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bandeira_do_munic%C3%ADpio_de_Vitor_Meireles_%28SC%29.svg/640px-Bandeira_do_munic%C3%ADpio_de_Vitor_Meireles_%28SC%29.svg.png" height="40PX"><STRONG>VITOR MEIRELES</strong> </a></td>
+    
+</tr>
+</tr> 
+<td><IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bandeira_do_munic%C3%ADpio_de_Witmarsum_%28SC%29.svg/1200px-Bandeira_do_munic%C3%ADpio_de_Witmarsum_%28SC%29.svg.png" height="40PX"><STRONG>WITMARSUM</strong> </a></td>
+
+
+</tr>
+ </table>
+</div>
+
+            </section>
+        </main>
+        <script src="scripts.js">
+            
+        </script>
+      
+        
+    </div>
+    
+    </body>
+    </html>
+</html>

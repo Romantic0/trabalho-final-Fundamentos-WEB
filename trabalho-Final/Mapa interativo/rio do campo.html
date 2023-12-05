@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rio do campo</title>
+    <link rel="stylesheet" href="cidades.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        
+
+        .image-area {
+            border: 2px solid black;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #000;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        .btn:hover {
+            background-color: #444;
+        }
+
+        .btn-next {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .btn-prev {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+        }
+        .btn-prin {
+            position: fixed;
+            bottom: 20px;
+            left: 100px;
+        }
+        @media screen and (max-width: 768px) {
+        body {
+            padding: 20px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div style="flex: 1; margin: 20px;">
+        <h1>RIO DO CAMPO</h1>
+        <table>
+            <tr>
+                <th>População</th>
+                <td> [6.452 (IBGE/2022)]</td>
+            </tr>
+            <tr>
+                <th>IDH</th>
+                <td>  [0,729]</td>
+            </tr>
+            <tr>
+                <th>Renda Bruta</th>
+                <td> [31.196,33 R$(2020)]
+                </td>
+            </tr>
+            <tr>
+                <th>Prefeito</th>
+                <td>Vidal Balak</td>
+            </tr>
+            
+            <!-- Adicione as outras informações conforme necessário -->
+        </table>
+    </div>
+    <div style="flex: 1; margin: 20px;">
+        <div class="image-area">
+            <img src="https://www.mbi.com.br/mbi/files/media/image/simbolopedia/municipio-rio-do-campo-bandeira-simb-brsssc0401114508.jpg" alt="Imagem da direita">
+        </div>
+    </div>
+    <a href="rio do oeste.html" class="btn btn-next">Próxima</a>
+    <a href="indexMap.html" class="btn btn-prin">Pagina principal</a>
+    <a href="presidente nereu.html" class="btn btn-prev">Voltar</a>
+
+    
+    <div style="flex: 1; margin: 20px;">
+        <h1>HISTORIA</h1>
+        <textarea rows="40" cols="70" style="background-color:#B0C4DE; font-size: large; font-family: 'Times New Roman', Times, serif;">
+            Rio do Campo, uma pérola no Alto Vale do Itajaí, Santa Catarina, é um município que se destaca por sua atmosfera tranquila, beleza natural e rica herança cultural, refletindo a essência acolhedora do interior catarinense.
+
+            Economicamente ligado à agricultura, Rio do Campo é conhecido por suas práticas agrícolas diversificadas. Cultivos como o feijão, milho e tabaco desempenham um papel importante na economia local, mantendo vivas as tradições agrícolas que moldaram a identidade do município.
+            
+            A comunidade de Rio do Campo preserva com orgulho suas raízes e tradições. Eventos culturais, festivais e manifestações folclóricas são momentos em que os moradores celebram a riqueza de sua herança, transmitindo-a de geração em geração.
+            
+            A paisagem natural ao redor de Rio do Campo é de tirar o fôlego. Rios sinuosos, colinas verdejantes e trilhas que serpenteiam por áreas preservadas oferecem aos visitantes oportunidades para explorar e apreciar a beleza natural da região.
+            
+            A gastronomia local, muitas vezes centrada em ingredientes frescos da região, proporciona uma experiência culinária autêntica. Restaurantes locais podem oferecer pratos que refletem a tradição agrícola e os sabores característicos de Rio do Campo.
+            
+            Rio do Campo é mais do que um ponto no mapa; é uma narrativa viva de uma comunidade resiliente e de uma conexão profunda com a terra. Uma visita a este município revela não apenas suas paisagens pitorescas, mas também a calma e a autenticidade que definem a vida no interior catarinense.
+            
+        </textarea>
+    </div>
+</body>
+</html>
